@@ -1,0 +1,32 @@
+name: BlackRoad task
+description: Claim or describe a BlackRoad task
+title: "[TASK] "
+labels: ["task"]
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: Task
+      description: What needs to be done?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What files, systems, or repos are involved?
+    validations:
+      required: true
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      options:
+        - UNCLAIMED
+        - CLAIMED
+        - IN_PROGRESS
+        - BLOCKED
+        - REVIEW
+        - DONE
+    validations:
+      required: true
